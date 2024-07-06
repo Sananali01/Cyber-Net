@@ -107,7 +107,7 @@ const Navbar = () => {
                 Sign In
               </a>
               <a
-                href="#"
+                href="/register"
                 className="py-2 px-3 rounded-md bg-gradient-to-r from-red-500 to-red-800 text-white hover:from-red-700 hover:to-red-900 create-account-btn"
               >
                 Create an account

@@ -1,35 +1,70 @@
-## Welcome to my Website!
+# Getting Started with Create React App
 
-This repository serves as the foundation for my personal website built using React and Vite. It provides a minimal setup to ensure a smooth development experience with Hot Module Replacement (HMR) and integrates ESLint for code quality.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Features
+## Available Scripts
 
-- **React + Vite**: Utilizes the Vite build tool for fast development and optimized builds.
-- **Fast Refresh**: Ensures quick updates during development thanks to Hot Module Replacement.
-- **ESLint Integration**: Includes ESLint setup for maintaining code quality and consistency.
+In the project directory, you can run:
 
-### Plugins Used
+### `npm start`
 
-- **[@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react)**: Integrates React with Vite using Babel for Fast Refresh.
-- **[@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc)**: Alternative plugin that uses SWC for Fast Refresh.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Getting Started
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-To start developing:
+### `npm test`
 
-1. Clone this repository.
-2. Install dependencies with `npm install` or `yarn install`.
-3. Run the development server with `npm run dev` or `yarn dev`.
-4. Open your browser and navigate to `http://localhost:5173` to see your website.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Customize
+### `npm run build`
 
-Feel free to customize the content and design of the website to fit your needs. You can modify components, styles, and add additional pages or features as required.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Feedback
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvements, please open an issue or a pull request. Let's make this project even better together!
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### License
+### `npm run eject`
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

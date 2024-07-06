@@ -52,7 +52,7 @@ const SignInPage = () => {
           <div className="flex items-center justify-between">
             <div className="text-sm">
               <a
-                href="#"
+                href="/"
                 className="flex items-center font-medium text-grey-500 hover:text-red-700"
               >
                 <LockIcon className="mr-1 h-4 w-4" /> Forgot your password?
