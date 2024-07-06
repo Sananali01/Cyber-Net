@@ -1,0 +1,6 @@
+@media (max-width: 375px) and (min-width: 320px) {
+    .signin-btn,
+    .create-account-btn {
+      font-size: smaller;
+    }
+  }
