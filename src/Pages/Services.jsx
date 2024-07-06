@@ -3,11 +3,11 @@ import serviceImage1 from "../assets/Services/1.jpg"; // Import service images
 import serviceImage2 from "../assets/Services/2.jpg"; 
 import serviceImage3 from "../assets/Services/3.png"; 
 import serviceImage4 from "../assets/Services/4.png"; 
-import serviceImage5 from "../assets/Services/1.jpg"; 
-import serviceImage6 from "../assets/Services/1.jpg"; 
-import serviceImage7 from "../assets/Services/1.jpg"; 
-import serviceImage8 from "../assets/Services/1.jpg";
-import serviceImage9 from "../assets/Services/1.jpg";
+import serviceImage5 from "../assets/Services/5.png"; 
+import serviceImage6 from "../assets/Services/6.jpg"; 
+import serviceImage7 from "../assets/Services/7.jpg"; 
+import serviceImage8 from "../assets/Services/8.jpg";
+import serviceImage9 from "../assets/Services/9.jpg";
 
 const services = [
   {
@@ -86,7 +86,7 @@ const ServicesPage = () => {
               key={index}
               className="bg-neutral-800 rounded-lg p-6 flex flex-col items-center transform transition duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <div className="relative w-full h-40 overflow-hidden rounded-t-lg">
+              <div className="relative w-full h-40 overflow-hidden ">
                 <img src={service.image} alt={service.title} className="absolute inset-0 w-full h-full object-cover" />
               </div>
               <div className="flex items-center justify-center h-16 w-16 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full mt-6">

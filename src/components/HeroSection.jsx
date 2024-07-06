@@ -16,13 +16,13 @@ const HeroSection = () => {
       </p>
       <div className="flex flex-col sm:flex-row justify-center items-center mt-10 space-y-4 sm:space-y-0 sm:space-x-4">
         <a
-          href="#"
+          href="/pricing"
           className="bg-gradient-to-r from-red-500 to-red-700 py-3 px-6 rounded-md text-lg font-semibold transform transition duration-300 hover:scale-105 hover:shadow-lg"
         >
           Get Started
         </a>
         <a
-          href="#"
+          href="/services"
           className="border border-red-700 py-3 px-6 rounded-md text-lg font-semibold transform transition duration-300 hover:scale-105 hover:shadow-lg"
         >
           Learn More
