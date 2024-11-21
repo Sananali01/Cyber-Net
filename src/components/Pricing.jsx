@@ -1,5 +1,6 @@
 import { CheckCircle2, ArrowRight } from "lucide-react"; // Importing icons from Lucide React
 import { pricingOptions } from "../constants";
+import { Link } from 'react-router-dom';
 
 const Pricing = () => {
   return (
@@ -43,12 +44,12 @@ const Pricing = () => {
                     ))}
                   </ul>
                 </div>
-                <a
-                  href="/"
+                <Link
+                  to="/payment"  // Replace with the actual route to your payment page
                   className="inline-flex justify-center items-center text-center h-12 p-5 mt-8 bg-gradient-to-r from-red-500 to-red-700 hover:from-red-700 hover:to-red-900 text-white border border-red-700 rounded-lg transition duration-200 transform hover:scale-110"
                 >
                   Buy {option.title} <ArrowRight className="ml-2" />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

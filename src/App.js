@@ -11,6 +11,7 @@ import AboutPage from "./Pages/About";
 import FAQPage from "./Pages/FAQPage";
 import ServicesPage from "./Pages/Services";
 import ContactPage from "./Pages/Contact";
+import PaymentPage from "./components/PaymentPage";
 
 const App = () => {
   return (
@@ -30,13 +31,14 @@ const App = () => {
                     <Route path="/faq" element={<FAQPage />} />
                     <Route path="/services" element={<ServicesPage />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/payment" element={<PaymentPage />} />
                   </Routes>
                 </div>
                 <Footer />
               </>
             }
           />
-
+          
           <Route path="/signin" element={<SignInPage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="*" element={<ErrorPage />} />

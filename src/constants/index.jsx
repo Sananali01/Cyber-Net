@@ -99,8 +99,6 @@ export const testimonials = [
 ];
 
 
-
-
 export const features = [
   {
     icon: <BotMessageSquare />,
