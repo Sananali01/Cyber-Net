@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Clock, Building } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 const ContactPage = () => {
   const [formState, setFormState] = useState({
@@ -7,6 +8,8 @@ const ContactPage = () => {
     email: '',
     message: '',
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -16,9 +19,33 @@ const ContactPage = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Form submitted!');
+    setIsSubmitting(true);
+
+    const serviceId = 'service_3s2jn3b'; // Replace with your EmailJS Service ID
+    const templateId = 'template_pyl9lgs'; // Replace with your EmailJS Template ID
+    const userId = 'WFAR65HNHEzj-0vlV'; // Replace with your EmailJS Public Key
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        },
+        userId
+      );
+      alert('Your message has been sent!');
+      setFormState({ name: '', email: '', message: '' });
+    } catch (error) {
+      console.error('Failed to send message:', error);
+      alert('Failed to send the message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -72,8 +99,10 @@ const ContactPage = () => {
               <button
                 type="submit"
                 className="flex items-center justify-center w-full py-4 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-md hover:from-red-700 hover:to-yellow-700 focus:outline-none focus:ring-2 focus:ring-red-500"
+                disabled={isSubmitting}
               >
-                Send Message <Send className="ml-2" />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                <Send className="ml-2" />
               </button>
             </form>
           </div>
@@ -128,15 +157,14 @@ const ContactPage = () => {
 
         {/* Map Section */}
         <div className="bg-neutral-800 p-8 rounded-lg shadow-lg text-center">
-  <h2 className="text-3xl font-semibold mb-6">Visit Us</h2>
-  <iframe
-    title="Map of Lahore"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13609.33910604587!2d74.30987164786963!3d31.520261402110947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919044d3c6894ed%3A0x94e0e6f2b6cf99a1!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1698516407692!5m2!1sen!2s"
-    className="w-full h-96 border-0 rounded-md"
-    allowFullScreen=""
-  ></iframe>
-</div>
-
+          <h2 className="text-3xl font-semibold mb-6">Visit Us</h2>
+          <iframe
+            title="Map of Lahore"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13609.33910604587!2d74.30987164786963!3d31.520261402110947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919044d3c6894ed%3A0x94e0e6f2b6cf99a1!2sLahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1698516407692!5m2!1sen!2s"
+            className="w-full h-96 border-0 rounded-md"
+            allowFullScreen=""
+          ></iframe>
+        </div>
       </div>
     </div>
   );
